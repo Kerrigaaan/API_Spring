@@ -15,5 +15,4 @@ public class User {
     @OneToMany(mappedBy = "seller")
     private List<Item> items;
 
-    // getters and setters
 }

@@ -20,5 +20,4 @@ public class Item {
     @JoinColumn(name = "seller_id")
     private User seller;
 
-    // getters and setters
 }

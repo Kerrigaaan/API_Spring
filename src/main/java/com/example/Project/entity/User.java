@@ -1,4 +1,4 @@
-package com.example.marketplace.entity;
+package com.example.Project.entity;
 
 import javax.persistence.*;
 import java.util.List;

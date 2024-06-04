@@ -1,7 +1,7 @@
-package com.example.marketplace.controller;
+package com.example.Project.controller;
 
-import com.example.marketplace.entity.Item;
-import com.example.marketplace.service.ItemService;
+import com.example.Project.entity.Item;
+import com.example.Project.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

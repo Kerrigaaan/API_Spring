@@ -1,7 +1,7 @@
-package com.example.marketplace.service;
+package com.example.Project.service;
 
-import com.example.marketplace.entity.Item;
-import com.example.marketplace.repository.ItemRepository;
+import com.example.Project.entity.Item;
+import com.example.Project.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

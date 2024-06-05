@@ -1,7 +1,6 @@
-package com.example.Project.entity;
+package com.saintjulienbeychevelle.market.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 public class Item {
@@ -12,12 +11,9 @@ public class Item {
     private String name;
     private String description;
     private double price;
-    private String category;
-    private boolean isSold;
-    private LocalDateTime createdAt;
+    private boolean sold = false;
 
     @ManyToOne
-    @JoinColumn(name = "seller_id")
     private User seller;
 
 }

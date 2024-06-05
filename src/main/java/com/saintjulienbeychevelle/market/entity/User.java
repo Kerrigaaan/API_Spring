@@ -11,7 +11,7 @@ public class User {
 
     private String username;
     private String password;
-    private String role; // SELLER, BUYER
+    private String role;
 
     @OneToMany(mappedBy = "seller")
     private List<Item> items;

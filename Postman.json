@@ -1,0 +1,145 @@
+{
+    "info": {
+      "name": "Market API",
+      "description": "API for the digitalized market of Saint-Julien-Beychevelle",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Add User",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"username\": \"john_doe\",\n  \"password\": \"password123\",\n  \"role\": \"SELLER\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/users",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "users"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Add Item",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Old Chair\",\n  \"description\": \"A vintage wooden chair\",\n  \"price\": 50.0,\n  \"seller\": {\n    \"id\": 1\n  }\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/items",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get All Items",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/items",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Items by Seller",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/items/seller/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items", "seller", "1"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Delete Item",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/items/1/seller/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items", "1", "seller", "1"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Update Item",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Updated Chair\",\n  \"description\": \"An updated description\",\n  \"price\": 55.0,\n  \"seller\": {\n    \"id\": 1\n  }\n}"
+          },
+          "url": {
+            "raw": "http://localhost:8080/api/items/1/seller/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items", "1", "seller", "1"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Mark Item as Sold",
+        "request": {
+          "method": "PUT",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:8080/api/items/1/sold/seller/1",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "8080",
+            "path": ["api", "items", "1", "sold", "seller", "1"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  

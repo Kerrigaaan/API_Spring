@@ -1,4 +1,4 @@
-package com.example.Project.entity;
+package com.saintjulienbeychevelle.market.entity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,7 +10,8 @@ public class User {
     private Long id;
 
     private String username;
-    private String email;
+    private String password;
+    private String role; // SELLER, BUYER
 
     @OneToMany(mappedBy = "seller")
     private List<Item> items;
